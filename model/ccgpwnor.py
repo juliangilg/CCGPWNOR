@@ -73,7 +73,7 @@ class DKLModel(gpytorch.Module):
                inducing_p, grid_bounds=(-10., 10.)):
       super(DKLModel, self).__init__()
       self.feature_extractor = feature_extractor(input_dim, num_dim)
-      self.gp_layer = MultitaskGPModel(num_dim, num_clases, inducing_p, num_dim)
+      self.gp_layer = GPslayer(num_dim, num_clases, inducing_p, num_dim)
       self.grid_bounds = grid_bounds
       self.num_dim = num_dim
 
