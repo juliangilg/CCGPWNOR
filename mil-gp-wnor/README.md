@@ -3,7 +3,7 @@
 Sparse variational multi-output Gaussian process for Multiple Instance Learning (MIL) with
 uncertainty estimation. Each instance gets two latent functions:
 
-- `f_p` → instance probability `p_ij = sigmoid(f_p)`
+- `f_p` → instance score `p_ij = sigmoid(f_p)`
 - `f_w` → instance weight `w_ij = softmax_j(f_w)` (normalised within the bag)
 
 Instances are aggregated with a **weighted Noisy-OR**:
