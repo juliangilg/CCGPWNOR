@@ -124,15 +124,4 @@ NLPD, Brier, ECE, AURC (entropy) and AURC (predictive variance). Decision thresh
 the validation split (G-mean on the ROC curve). The validation split is a stratified 15 % of the
 official training split.
 
-## Default configurations
 
-| | Camelyon16 | PANDA | RSNA |
-|---|---|---|---|
-| mode | correlated | correlated | correlated |
-| projected dim | 32 | 32 | 16 |
-| inducing points M | 150 | 50 | 100 |
-| epochs | 30 | 50 | 300 |
-| learning rate (Adam / NGD) | 1e-3 / 0.01 | 1e-3 / 0.01 | 5e-3 / 0.01 |
-| batch size | 1 | 32 | 32 |
-| MC sampling | diagonal | diagonal | full covariance |
-| ELBO likelihood scale | 500 | 1 | 1 |
