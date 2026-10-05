@@ -47,7 +47,7 @@ mil-gp-wnor/
 ## Installation
 
 ```bash
-git clone <this-repo-url>
+git clone [<this-repo-url>](https://github.com/juliangilg/CCGPWNOR.git)
 cd mil-gp-wnor
 pip install -r requirements.txt
 ```
