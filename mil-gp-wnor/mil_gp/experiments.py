@@ -21,14 +21,14 @@ CONFIGS = {
     ),
     "panda": dict(
         model=dict(input_dim=1024, num_dim=32, mode="correlated", num_latents=2, num_samples=50,
-                   minis=-1, maxis=1, diag_sampling=True, elbo_scale=False),
+                   minis=-1, maxis=1, diag_sampling=True, elbo_scale=True),
         train=dict(inducing_values=(50,), seeds=(0,), epochs=10, lr=1e-3, ngd_lr=0.01,
                    instance_key=None),
         batch_size=32, load_at_init=True,
     ),
     "rsna": dict(
         model=dict(input_dim=2048, num_dim=32, mode="correlated", num_latents=2, num_samples=50,
-                   minis=-1, maxis=1, diag_sampling=True, elbo_scale=False),
+                   minis=-1, maxis=1, diag_sampling=True, elbo_scale=True),
         train=dict(inducing_values=(50,), seeds=(0,), epochs=10, lr=1e-3, ngd_lr=0.01,
                    instance_key="y_inst"),
         batch_size=32, load_at_init=True,
