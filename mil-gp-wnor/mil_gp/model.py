@@ -86,7 +86,10 @@ class WeightedNoisyORLikelihood(Likelihood):
 
         log_pos = torch.log(bag_p).mean(0)                         # E[log P(Y=1)]
         log_neg = torch.sum(w * torch.log(1 - p), dim=2).mean(0)   # E[log P(Y=0)]
-        return self.elbo_scale * torch.sum(target * log_pos + (1 - target) * log_neg)
+        if self.elbo_scale:
+           return self.N * torch.sum(target * log_pos + (1 - target) * log_neg)
+        else:
+           return 1 * torch.sum(target * log_pos + (1 - target) * log_neg)
 
     def marginal(self, function_dist, *args, **kwargs):
         """Predictive means/variances at bag and instance level."""
